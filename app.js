@@ -1,31 +1,36 @@
 let express = require('express');
 let app = express();
-let port = 3030;
+let port = 3031;
 let path = require('path');
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.hmtl'));
+    res.sendFile(path.join(__dirname, '/views/index.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/babage.hmtl'));
+app.get('/babbage', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/babbage.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/berners.hmtl'));
+app.get('/berners-lee', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/berners-lee.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/clarke.hmtl'));
+app.get('/clarke', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/clarke.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/hamilton.hmtl'));
+app.get('/hamilton', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/hamilton.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/hopper.hmtl'));
+app.get('/hopper', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/hopper.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/lovelace.hmtl'));
+app.get('/lovelace', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/lovelace.html'));
 })
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/turing.hmtl'));
+app.get('/turing', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/turing.html'));
+})
+
+
+app.listen(port, () => {
+    console.log("servidor corriendo");
 })
 
 
